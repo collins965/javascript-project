@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanguard Wealth Markets</title>
+
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+   
+<!-- Navbar -->
+<nav class="bg-black text-white fixed top-0 left-0 w-full z-50 shadow-lg">
+    <div class="container mx-auto flex items-center justify-between p-4 flex-wrap">
+
+        <!-- Left Section: Logo and Hamburger Menu -->
+        <div class="flex items-center">
+            <img src="Assets/Vanguard Wealth Markets logo.webp" alt="Logo" class="h-10 w-auto">
+            
+            <!-- Hamburger Menu Button -->
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none ml-4">
+                ☰
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu (Hidden by Default) -->
+        <div id="mobile-menu" class="hidden w-full mt-4 md:hidden">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="#about-us" class="hover:text-red-500 block">About Us</a></li>
+                <li><a href="#investment-plans" class="hover:text-red-500 block">Investment Plans</a></li>
+                <li><a href="#market-insights" class="hover:text-red-500 block">Market Insights</a></li>
+                <li><a href="#contact" class="hover:text-red-500 block">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Center Section: Navigation Links (Hidden in Small Screens) -->
+        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
+            <ul class="flex text-white space-x-6">
+                <!-- About Us -->
+                <li class="relative group">
+                    <a href="#about-us" class="hover:text-red-500 block">About Us</a>
+                    <ul class="absolute hidden group-hover:block bg-white text-black shadow-md mt-2 rounded-md w-48 top-full left-0 z-50">
+                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#team">Our Team</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#mission">Mission</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#history">History</a></li>
+                    </ul>
+                </li>
+
+                <!-- Investment Plans -->
+                <li class="relative group">
+                    <a href="#investment-plans" class="hover:text-red-500 block">Investment Plans</a>
+                    <ul class="absolute hidden group-hover:block bg-white text-black shadow-md mt-2 rounded-md w-48 top-full left-0 z-50">
+                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#stocks">Stocks</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#bonds">Bonds</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#realestate">Real Estate</a></li>
+                    </ul>
+                </li>
+
+                <!-- Market Insights -->
+                <li class="relative group">
+                    <a href="#market-insights" class="hover:text-red-500 block">Market Insights</a>
+                    <ul class="absolute hidden group-hover:block bg-white text-black shadow-md mt-2 rounded-md w-56 top-full left-0 z-50">
+                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#economic-trends">Economic Trends</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#stock-reports">Stock Reports</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#crypto-updates">Crypto Market Updates</a></li>
+                    </ul>
+                </li>
+
+                <!-- Contact Button -->
+                <li class="relative group">
+                    <a href="#contact" class="hover:text-red-500 block">Contact Us</a>
+                    <ul class="absolute hidden group-hover:block bg-white text-black shadow-md mt-2 rounded-md 
+                            w-full left-0 right-0 md:w-48 md:left-0 z-50">
+                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#email">Email</a></li>
+                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#phone">Phone</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+ <!-- Right Section: Authentication Buttons -->
+<div class="flex space-x-4"> 
+    <!-- Account button -->
+    <a href="account.html" class="bg-[#FFD700] text-black px-4 py-2 rounded hover:bg-red-500">
+        My account
+    </a>
+
+    <!-- Sign Up button -->
+    <a href="signup.html" class="bg-[#FFD700] text-black px-4 py-2 rounded hover:bg-red-500">
+        Sign Up
+    </a>
+</div>
+
+
+
+    </div>
+    </div>
+</nav>
+
+<!-- JavaScript for Mobile Menu Toggle -->
+<script>
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        var menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+    });
+</script>
+
+
+    <!-- Hero Section -->
+    <section class="relative pt-16">
+        <img src="Assets/pexels-alesiakozik-6770611.jpg" alt="Stock Market Growth" class="w-full h-96 object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center space-y-4">
+            <h2 class="text-3xl text-[#FFD700] font-bold">Vanguard Wealth Markets</h2>
+            <p class="text-xl text-[#FFD700] font-semibold">Investment opportunities tailored to your goals</p>
+        </div>
+    </section>
+
+<!-- About Us Section -->
+<section id="about-us" class="py-16 relative bg-cover bg-center" 
+    style="background-image: url('Assets/pexels-karolina-grabowska-5980577.jpg');">
+    <!-- Overlay to Reduce Background Opacity -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <div class="relative z-10 flex justify-center">
+        <!-- Enlarged, Centered, and Transparent Card -->
+        <div class="w-3/4 md:w-2/3 p-8 bg-white bg-opacity-80 shadow-lg rounded-lg text-center">
+            <h2 class="text-4xl font-bold text-blue-900 mb-4">About Vanguard Wealth Markets</h2>
+            <p class="text-gray-700 text-lg mb-4">
+                Vanguard Wealth Markets is a leading financial advisory firm specializing in 
+                <strong>investment management, wealth planning, and financial consulting</strong>. Our expert team 
+                provides personalized strategies to help individuals and businesses achieve financial success.
+            </p>
+
+            <h3 class="text-2xl font-semibold text-blue-800 mt-4">Our Mission</h3>
+            <p class="text-gray-700">
+                Our mission is to <strong>empower clients</strong> with the <strong>best investment strategies, risk management solutions, 
+                and financial planning insights</strong> to secure long-term wealth.
+            </p>
+
+            <h3 class="text-2xl font-semibold text-blue-800 mt-4">Why Choose Us?</h3>
+            <ul class="list-disc pl-5 text-gray-700 text-left inline-block">
+                <li><strong>Expert Guidance:</strong> Professional advisors with decades of experience.</li>
+                <li><strong>Customized Strategies:</strong> Tailored solutions based on your financial goals.</li>
+                <li><strong>Market Insights:</strong> Stay ahead with real-time market analysis.</li>
+                <li><strong>Transparency & Trust:</strong> We prioritize integrity in every decision.</li>
+            </ul>
+
+            <h3 class="text-2xl font-semibold text-blue-800 mt-4">Our Services</h3>
+            <ul class="list-disc pl-5 text-gray-700 text-left inline-block">
+                <li><strong>Investment Planning</strong> – Maximize returns with expert portfolio management.</li>
+                <li><strong>Real Estate Advisory</strong> – Smart property investments for wealth growth.</li>
+                <li><strong>Retirement Planning</strong> – Secure your future with long-term financial strategies.</li>
+                <li><strong>Market Analysis</strong> – In-depth reports for informed decision-making.</li>
+            </ul>
+
+            <!-- Call to Action Button -->
+            <div class="mt-6">
+                <a href="#contact" class="bg-[#FFD700] text-black px-6 py-3 rounded-md font-bold hover:bg-red-500 transition">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <!-- Investment Plan Card -->
+<section id="investment-plans" class="py-16 bg-gray-300">
+    <div class="text-center text-gray-900">
+        <h2 class="text-3xl text-[#FFD700] font-bold">Investment Plans</h2>
+        <p class="mt-2 text-sm text-gray-700">Secure & High-Yield Investments for a Prosperous Future</p>
+    </div>
+
+    <!-- Investment Plan Details -->
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 px-4">
+
+        <!-- Plan 1: Fixed Income -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col items-center p-4">
+            <h3 class="text-lg font-bold text-blue-500">🔹 Fixed Income Plan</h3>
+            <p class="text-gray-700 mt-2 text-sm">
+                Designed for stability and guaranteed returns, offering a <strong>low-risk</strong>, steady ROI.
+            </p>
+            <ul class="mt-2 text-xs text-gray-600 list-disc pl-4">
+                <li>📈 Expected Return: 7% - 10%</li>
+                <li>⏳ Tenure: 1 - 5 Years</li>
+                <li>🛡️ Risk: Low</li>
+                <li>💰 Min Investment: $5,000</li>
+            </ul>
+            <img src="Assets/Fixedincomeplan.jpg" alt="Fixed Income" class="w-full h-32 object-cover rounded-lg mt-3">
+        </div>
+
+        <!-- Plan 2: Growth Fund -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col items-center p-4">
+            <h3 class="text-lg font-bold text-blue-500">🔹 Growth Fund Plan</h3>
+            <p class="text-gray-700 mt-2 text-sm">
+                Focused on long-term wealth growth with <strong>moderate risk</strong> and high potential returns.
+            </p>
+            <ul class="mt-2 text-xs text-gray-600 list-disc pl-4">
+                <li>📈 Expected Return: 12% - 18%</li>
+                <li>⏳ Tenure: 3 - 7 Years</li>
+                <li>🛡️ Risk: Moderate</li>
+                <li>💰 Min Investment: $10,000</li>
+            </ul>
+            <img src="Assets/grow fund.jpg" alt="Growth Fund" class="w-full h-32 object-cover rounded-lg mt-3">
+        </div>
+
+        <!-- Plan 3: High-Yield Market Fund -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col items-center p-4">
+            <h3 class="text-lg font-bold text-blue-500">🔹 High-Yield Market Fund</h3>
+            <p class="text-gray-700 mt-2 text-sm">
+                Designed for <strong>high-risk</strong> investors focused on market-driven opportunities.
+            </p>
+            <ul class="mt-2 text-xs text-gray-600 list-disc pl-4">
+                <li>📈 Expected Return: 20% - 30%</li>
+                <li>⏳ Tenure: 5 - 10 Years</li>
+                <li>🛡️ Risk: High</li>
+                <li>💰 Min Investment: $25,000</li>
+            </ul>
+            <img src="Assets/high yield market fund.jpg" alt="High-Yield Market Fund" class="w-full h-32 object-cover rounded-lg mt-3">
+        </div>
+
+        <!-- Plan 4: Retirement Security Plan -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col items-center p-4">
+            <h3 class="text-lg font-bold text-blue-500">🔹 Retirement Security Plan</h3>
+            <p class="text-gray-700 mt-2 text-sm">
+                A <strong>low-risk</strong> plan for long-term security and financial independence.
+            </p>
+            <ul class="mt-2 text-xs text-gray-600 list-disc pl-4">
+                <li>📈 Expected Return: 6% - 9%</li>
+                <li>⏳ Tenure: 10+ Years</li>
+                <li>🛡️ Risk: Low to Moderate</li>
+                <li>💰 Min Investment: $3,000</li>
+            </ul>
+            <img src="Assets/Retirement.jpg" alt="Retirement Security Plan" class="w-full h-32 object-cover rounded-lg mt-3">
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Call to Action -->
+<div class="bg-gray-800 p-6 text-center">
+    <p class="text-white font-semibold text-sm">
+        Start investing with <strong>Vanguard Wealth Markets</strong> today and build a future of financial security!
+    </p>
+    <a href="invest-now.html" class="mt-4 inline-block bg-[#FFD700] text-black py-2 px-6 rounded-full text-sm font-semibold transition hover:bg-red-500">
+        Invest Now
+    </a>
+</div>
+
+    </div>
+
+<!-- Insights Cards Container -->
+<div class="mt-8 grid grid-cols-1 md:grid-cols-2 bg-gray-300 gap-6 px-4">
+
+    <!-- Card 1: Market Performance & Economic Outlook -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col items-center w-full md:w-auto">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold text-blue-500">
+                🔹 Market Performance & Economic Outlook
+            </h3>
+            <p class="text-gray-700 text-sm leading-relaxed mt-2">
+                Global financial markets continue to experience volatility amid ongoing economic uncertainty. 
+                The <strong>S&P 500</strong> has shown resilience, closing at 4,750 points, marking a 
+                <strong>3.2% increase</strong> in Q1. Meanwhile, the <strong>Federal Reserve's stance on 
+                interest rates remains cautious</strong>, with analysts predicting a potential rate cut 
+                in the latter half of the year.
+            </p>
+        </div>
+        <img src="Assets/Market Performance & Economic Outlook.jpg" alt="Market Performance" class="w-full h-40 object-cover rounded-b-xl">
+    </div>
+
+    <!-- Card 2: Key Market Metrics -->
+    <div class="bg-gray-50 shadow-lg rounded-xl overflow-hidden flex flex-col items-center w-full md:w-auto">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold text-blue-500">🔹 Key Market Metrics</h3>
+            <ul class="mt-2 space-y-2 text-gray-700 text-sm">
+                <li><strong> S&P 500:</strong> 4,750 (+3.2% Q1 Growth)</li>
+                <li><strong> Fed Interest Rate:</strong> 5.25% (No Change Expected in Q2)</li>
+                <li><strong> Gold Prices:</strong> $2,050/oz (+5% YTD)</li>
+                <li><strong> Crude Oil:</strong> $83/barrel (-2.1% WTD)</li>
+                <li><strong> Forex (USD/EUR):</strong> 1.08 (-0.5% MTD)</li>
+            </ul>
+        </div>
+        <img src="Assets/Key Market Metrics.jpg" alt="Market Metrics" class="w-full h-40 object-cover rounded-b-xl">
+    </div>
+
+    <!-- Card 3: Investment Strategies -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden flex flex-col items-center w-full md:w-auto">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold text-blue-500">
+                🔹 Investment Strategies for 2025
+            </h3>
+            <p class="text-gray-700 text-sm leading-relaxed mt-2">
+                As market conditions evolve, <strong>Vanguard Wealth Markets</strong> recommends a diversified 
+                investment approach. Fixed-income assets remain attractive, particularly in 
+                <strong>government bonds</strong> and <strong>high-yield corporate bonds</strong>. 
+                <strong>Emerging market equities</strong> continue to show potential, with China and India 
+                leading growth. Investors are advised to <strong>monitor inflation trends</strong> and consider 
+                <strong>hedging strategies</strong> against currency fluctuations.
+            </p>
+        </div>
+        <img src="Assets/Investment Strategies.jpg" alt="Investment Strategies" class="w-full h-40 object-cover rounded-b-xl">
+    </div>
+
+    <!-- Card 4: Global Market Trends -->
+    <div class="bg-gray-50 shadow-lg rounded-xl overflow-hidden flex flex-col items-center w-full md:w-auto">
+        <div class="p-4">
+            <h3 class="text-lg font-semibold text-blue-500">
+                🔹 Global Market Trends & Tech Revolution
+            </h3>
+            <p class="text-gray-700 text-sm leading-relaxed mt-2">
+                The global economy is experiencing significant shifts driven by technology, geopolitical 
+                changes, and evolving consumer behaviors. Notable trends include:
+            </p>
+            <ul class="mt-2 space-y-2 text-gray-700 text-sm">
+                <li>🚀 <strong>Tech Stocks:</strong> AI & cloud computing firms driving market gains.</li>
+                <li>🌍 <strong>Geopolitical Tensions:</strong> U.S.-China trade policies affecting global supply chains.</li>
+                <li>💰 <strong>Crypto Boom:</strong> Bitcoin surpasses $70,000 amid institutional adoption.</li>
+                <li>🔋 <strong>Green Energy Investments:</strong> Surge in EV stocks and renewable projects.</li>
+                <li>📉 <strong>Recession Warnings:</strong> Analysts debate potential economic slowdown.</li>
+            </ul>
+        </div>
+        <img src="Assets/global markets trends.jpg" alt="Global Market Trends" class="w-full h-40 object-cover rounded-b-xl">
+    </div>
+
+</div>
+
+
+
+    <!-- CTA Button (Centered & Well-Placed) -->
+    <div class="flex justify-center mt-8">
+        <a href="market-insights.html" class="bg-[#FFD700] hover:bg-red-500 text-black text-center font-semibold py-3 px-6 rounded-md transition">
+            Read Full Report
+        </a>
+    </div>
+</section>
+
+
+ <!-- Contact Info -->
+
+ <section id="contact-us" class="py-16 relative bg-cover bg-center" 
+    style="background-image: url('Assets/pexels-joenibraw-1416530.jpg');">
+    
+    <!-- Overlay to Reduce Background Opacity -->
+    <div class="absolute inset-0 bg-black bg-opacity-30"></div> <!-- Reduced from 50 to 30 -->
+<!-- Contact Card -->
+<div class="relative z-10 max-w-lg mx-auto bg-white bg-opacity-90 p-8 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold text-blue-900">Our Office</h2>
+    <p class="mt-2 text-gray-600">1234 Kimathi Street, Nairobi, Na10001</p>
+    <p class="mt-2 text-gray-600">📞 <strong>0755901372</strong></p>
+    <p class="mt-2 text-gray-600">📧 <strong>contact@vanguardwealth.com</strong></p>
+    <p class="mt-4">Follow us on:</p>
+    <div class="flex space-x-4 mt-2">
+        <a href="#" class="text-blue-500 hover:text-blue-700">LinkedIn</a>
+        <a href="#" class="text-blue-500 hover:text-blue-700">Twitter</a>
+    </div>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 flex justify-center px-4 relative bg-cover bg-center"
+    style="background-image: url('Assets/pexels-christina99999-31310637.jpg');">
+    
+    <!-- Overlay to Reduce Background Opacity -->
+    <div class="absolute inset-0 bg-black bg-opacity-30"></div> <!-- Adjusted to 30% opacity -->
+
+    <!-- Contact Form Card -->
+    <div class="w-full max-w-lg bg-white bg-opacity-100 p-8 rounded-lg shadow-lg mt-12 relative z-10">  
+        <h2 class="text-2xl font-bold text-blue-900 text-center">Send Us a Message</h2>
+        <form action="#" method="POST" class="mt-4">
+            <label class="block text-gray-700">Full Name</label>
+            <input type="text" name="name" class="w-full p-3 border border-gray-300 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Input name" required>
+
+            <label class="block text-gray-700 mt-4">Email</label>
+            <input type="email" name="email" class="w-full p-3 border border-gray-300 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="you@example.com" required>
+
+            <label class="block text-gray-700 mt-4">Message</label>
+            <textarea name="message" class="w-full p-3 border border-gray-300 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4" placeholder="Your message..." required></textarea>
+
+            <button type="submit" class="w-full bg-[#FFD700] text-black p-3 mt-4 rounded hover:bg-red-500 transition">
+                Send Message
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- Review Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-gray-100">
+    
+    <!-- Review 1 -->
+    <div class="bg-white p-4 rounded-lg shadow-md">
+        <p class="text-gray-700 italic">"Vanguard Wealth Markets has transformed my investment portfolio. I’ve seen real growth!"</p>
+        <!-- Star Rating -->
+        <div class="text-yellow-500 mt-2">★★★★★</div>
+        <div class="mt-4 flex items-center space-x-3">
+            <img src="Assets/Mwangi.jpg" alt="Joseph Mwangi" class="w-12 h-12 rounded-full object-cover">
+            <div>
+                <p class="text-blue-700 font-semibold">Joseph Mwangi</p>
+                <p class="text-sm text-gray-500">Nairobi, Kenya</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review 2 -->
+    <div class="bg-white p-4 rounded-lg shadow-md">
+        <p class="text-gray-700 italic">"Their financial guidance has been a game changer. My investments are growing consistently!"</p>
+        <!-- Star Rating -->
+        <div class="text-yellow-500 mt-2">★★★★☆</div>
+        <div class="mt-4 flex items-center space-x-3">
+            <img src="Assets/Wanjiku kamau.jpg" alt="Wanjiku Kamau" class="w-12 h-12 rounded-full object-cover">
+            <div>
+                <p class="text-blue-700 font-semibold">Wanjiku Kamau</p>
+                <p class="text-sm text-gray-500">Mombasa, Kenya</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review 3 -->
+    <div class="bg-white p-4 rounded-lg shadow-md">
+        <p class="text-gray-700 italic">"A highly professional team that truly understands wealth management. Highly recommended!"</p>
+        <!-- Star Rating -->
+        <div class="text-yellow-500 mt-2">★★★★★</div>
+        <div class="mt-4 flex items-center space-x-3">
+            <img src="Assets/brian otieno.jpg" alt="Brian Otieno" class="w-12 h-12 rounded-full object-cover">
+            <div>
+                <p class="text-blue-700 font-semibold">Brian Otieno</p>
+                <p class="text-sm text-gray-500">Kisumu, Kenya</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review 4 -->
+    <div class="bg-white p-4 rounded-lg shadow-md">
+        <p class="text-gray-700 italic">"Investing with Vanguard Wealth Markets has been one of my best financial decisions."</p>
+        <!-- Star Rating -->
+        <div class="text-yellow-500 mt-2">★★★☆☆</div>
+        <div class="mt-4 flex items-center space-x-3">
+            <img src="Assets/Akinyi mutua.jpg" alt="Akinyi Mutua" class="w-12 h-12 rounded-full object-cover">
+            <div>
+                <p class="text-blue-700 font-semibold">Akinyi Mutua</p>
+                <p class="text-sm text-gray-500">Eldoret, Kenya</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review 5 -->
+    <div class="bg-white p-4 rounded-lg shadow-md">
+        <p class="text-gray-700 italic">"Excellent service and great returns! I feel confident about my financial future now."</p>
+        <!-- Star Rating -->
+        <div class="text-yellow-500 mt-2">★★★★☆</div>
+        <div class="mt-4 flex items-center space-x-3">
+            <img src="Assets/kevin ndungu.jpg" alt="Kevin Ndung'u" class="w-12 h-12 rounded-full object-cover">
+            <div>
+                <p class="text-blue-700 font-semibold">Kevin Ndung'u</p>
+                <p class="text-sm text-gray-500">Nakuru, Kenya</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review 6 -->
+    <div class="bg-white p-4 rounded-lg shadow-md">
+        <p class="text-gray-700 italic">"They provide expert investment advice and personalized financial strategies!"</p>
+        <!-- Star Rating -->
+        <div class="text-yellow-500 mt-2">★★★★★</div>
+        <div class="mt-4 flex items-center space-x-3">
+            <img src="Assets/susan omolo.jpg" alt="Susan Omollo" class="w-12 h-12 rounded-full object-cover">
+            <div>
+                <p class="text-blue-700 font-semibold">Susan Omollo</p>
+                <p class="text-sm text-gray-500">Thika, Kenya</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Review Button -->
+<div class="text-center mt-6">
+    <a href="review-form.html" class="bg-[#FFD700] text-white px-6 py-2 rounded-lg shadow hover:bg-red-500 transition">
+        Leave a Review
+    </a>
+</div>
+
+<!-- Footer -->
+<footer class="relative bg-black text-white py-10 mt-10">
+    <div class="container mx-auto px-8">
+        <!-- Top Section: Logo and Subtitle -->
+        <div class="flex flex-col md:flex-row justify-between items-center text-left space-y-4 md:space-y-0">
+            <!-- Logo & Title -->
+            <div class="flex items-center space-x-3">
+                <img src="Assets/Vanguard Wealth Markets logo.webp" alt="Vanguard Wealth Markets Logo" class="w-10 h-10 object-contain">
+                <h2 class="text-lg text-[#FFD700] font-bold">Vanguard Wealth Markets</h2>
+            </div>
+               <p> Your trusted partner in financial growth and security.
+            </p>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div class="flex flex-col md:flex-row justify-between items-start mt-8 space-y-6 md:space-y-0">
+            
+            <!-- Quick Links -->
+            <div class="flex-grow">
+                <h3 class="font-bold text-blue-500">Quick Links</h3>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="#about-us" class="hover:text-red-500">About Us</a></li>
+                    <li><a href="#market-insights" class="hover:text-red-500">Market Insights</a></li>
+                    <li><a href="#investment-plans" class="hover:text-red-500">Investment Plans</a></li>
+                    <li><a href="#contact-us" class="hover:text-red-500">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Details -->
+            <div class="flex-grow">
+                <h3 class="font-bold text-blue-500">Contact Us</h3>
+                <p class="text-gray-400">Email: 
+                    <a href="mailto:info@vanguardmarkets.com" class="hover:text-red-500">info@vanguardmarkets.com</a>
+                </p>
+                <p class="text-gray-400">Phone: 
+                    <a href="tel:+18005550123" class="hover:text-red-500">0755901372</a>
+                </p>
+            </div>
+<!-- Social Media -->
+<div class="flex flex-row lg:flex-col space-x-4 lg:space-x-0 lg:space-y-4">
+    <h3 class="font-bold text-blue-500">Follow us</h3>
+    <a href="https://www.facebook.com/vanguardmarkets" class="text-white hover:text-red-500">
+        <i class="fab fa-facebook text-2xl"></i>facebook
+    </a>
+    <a href="https://twitter.com/vanguardmarkets" class="text-white hover:text-red-500">
+        <i class="fab fa-twitter text-2xl"></i>twitter
+    </a>
+    <a href="https://www.linkedin.com/company/vanguardmarkets" class="text-white hover:text-red-500">
+        <i class="fab fa-linkedin text-2xl"></i>linkedin
+    </a>
+    <a href="https://www.instagram.com/vanguardmarkets" class="text-white hover:text-red-500">
+        <i class="fab fa-instagram text-2xl"></i>instagram
+    </a>
+</div>
+
+</footer>
+
+    <!-- FontAwesome for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
