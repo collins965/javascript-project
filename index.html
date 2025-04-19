@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanguard Wealth Markets</title>
 
-
-    <!-- Tailwind CSS -->
+    <!-- links -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 text-gray-900">
+
    
 <!-- Navbar -->
 <nav class="bg-black text-white fixed top-0 left-0 w-full z-50 shadow-lg">
@@ -540,8 +541,17 @@
 
 </footer>
 
-    <!-- FontAwesome for social media icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
+    <!-- Scripts for Smooth Fade-in of Form Fields -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const formFields = document.querySelectorAll('.form-field');
+        formFields.forEach(field => {
+            field.classList.remove('opacity-0');
+            field.classList.add('opacity-100');
+        });
+    });
+    </script>
+    <script src="script.js"></script
 </body>
 </html>
