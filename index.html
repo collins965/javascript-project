@@ -1,122 +1,140 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanguard Wealth Markets</title>
-
-    <!-- links -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanguard Wealth Markets</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-gray-100 text-gray-900">
 
-   
-<!-- Navbar -->
-<nav class="bg-black text-white fixed top-0 left-0 w-full z-50 shadow-lg">
-    <div class="container mx-auto flex items-center justify-between p-4 flex-wrap">
+  <!-- Navbar -->
+  <nav class="bg-black text-white fixed top-0 left-0 w-full z-50 shadow-lg">
+    <div class="container mx-auto flex items-center justify-between p-4">
 
-        <!-- Left Section: Logo and Hamburger Menu -->
-        <div class="flex items-center">
-            <img src="Assets/Vanguard Wealth Markets logo.webp" alt="Logo" class="h-10 w-auto">
-            
-            <!-- Hamburger Menu Button -->
-            <button id="menu-toggle" class="md:hidden text-white focus:outline-none ml-4">
-                ☰
-            </button>
-        </div>
+      <!-- LEFT: Logo -->
+      <div class="flex items-center space-x-10">
+        <img src="Assets/Vanguard Wealth Markets logo.webp" alt="Logo" class="h-10 w-auto">
+      </div>
 
-        <!-- Mobile Navigation Menu (Hidden by Default) -->
-        <div id="mobile-menu" class="hidden w-full mt-4 md:hidden">
-            <ul class="flex flex-col items-center space-y-4">
-                <li><a href="#about-us" class="hover:text-red-500 block">About Us</a></li>
-                <li><a href="#investment-plans" class="hover:text-red-500 block">Investment Plans</a></li>
-                <li><a href="#market-insights" class="hover:text-red-500 block">Market Insights</a></li>
-                <li><a href="#contact" class="hover:text-red-500 block">Contact Us</a></li>
-            </ul>
-        </div>
+      <!-- CENTER: Navigation Links -->
+      <div class="flex items-center justify-center">
+        <ul class="flex flex-row space-x-6 items-center text-white">
 
-        <!-- Center Section: Navigation Links (Hidden in Small Screens) -->
-        <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
-            <ul class="flex text-white space-x-6">
-                <!-- About Us -->
-                <li class="relative group">
-                    <a href="#about-us" class="hover:text-red-500 block">About Us</a>
-                    <ul class="absolute hidden group-hover:block bg-white text-black shadow-md mt-2 rounded-md w-48 top-full left-0 z-50">
-                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#team">Our Team</a></li>
-                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#mission">Mission</a></li>
-                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#history">History</a></li>
-                    </ul>
-                </li>
+          <!-- About Us -->
+          <li class="relative">
+            <div class="group" onmouseenter="clearHide(this)" onmouseleave="delayedHide(this)">
+              <a href="#about-us" class="hover:text-yellow-400 block transition-colors duration-200">About Us</a>
+              <ul class="absolute bg-white text-black shadow-md mt-2 rounded-md w-48 top-full left-0 z-50 hidden">
+                <li class="px-4 py-2 hover:bg-gray-200"><a href="#team">Our Team</a></li>
+                <li class="px-4 py-2 hover:bg-gray-200"><a href="#mission">Mission</a></li>
+                <li class="px-4 py-2 hover:bg-gray-200"><a href="#history">History</a></li>
+              </ul>
+            </div>
+          </li>
 
-                <!-- Investment Plans -->
-                <li class="relative group">
-                    <a href="#investment-plans" class="hover:text-red-500 block">Investment Plans</a>
-                    <ul class="absolute hidden group-hover:block bg-white text-black shadow-md mt-2 rounded-md w-48 top-full left-0 z-50">
-                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#stocks">Stocks</a></li>
-                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#bonds">Bonds</a></li>
-                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#realestate">Real Estate</a></li>
-                    </ul>
-                </li>
+          <!-- Investment Plans -->
+          <li class="relative">
+            <div class="group" onmouseenter="clearHide(this)" onmouseleave="delayedHide(this)">
+              <a href="#investment-plans" class="hover:text-yellow-400 block transition-colors duration-200">Investment Plans</a>
+              <ul class="absolute bg-white text-black shadow-md mt-2 rounded-md w-48 top-full left-0 z-50 hidden">
+                <li class="px-4 py-2 hover:bg-gray-200"><a href="#stocks">Stocks</a></li>
+                <li class="px-4 py-2 hover:bg-gray-200"><a href="#bonds">Bonds</a></li>
+                <li class="px-4 py-2 hover:bg-gray-200"><a href="#realestate">Real Estate</a></li>
+              </ul>
+            </div>
+          </li>
 
-                <!-- Market Insights -->
-                <li class="relative group">
-                    <a href="#market-insights" class="hover:text-red-500 block">Market Insights</a>
-                    <ul class="absolute hidden group-hover:block bg-white text-black shadow-md mt-2 rounded-md w-56 top-full left-0 z-50">
-                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#economic-trends">Economic Trends</a></li>
-                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#stock-reports">Stock Reports</a></li>
-                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#crypto-updates">Crypto Market Updates</a></li>
-                    </ul>
-                </li>
+          <!-- Market Insights -->
+          <li class="relative">
+            <div class="group" onmouseenter="clearHide(this)" onmouseleave="delayedHide(this)">
+              <a href="#market-insights" class="hover:text-yellow-400 block transition-colors duration-200">Market Insights</a>
+              <ul class="absolute bg-white text-black shadow-md mt-2 rounded-md w-56 top-full left-0 z-50 hidden">
+                <li class="px-4 py-2 hover:bg-gray-200"><a href="#economic-trends">Economic Trends</a></li>
+                <li class="px-4 py-2 hover:bg-gray-200"><a href="#stock-reports">Stock Reports</a></li>
+                <li class="px-4 py-2 hover:bg-gray-200"><a href="#crypto-updates">Crypto Market Updates</a></li>
+              </ul>
+            </div>
+          </li>
 
-                <!-- Contact Button -->
-                <li class="relative group">
-                    <a href="#contact" class="hover:text-red-500 block">Contact Us</a>
-                    <ul class="absolute hidden group-hover:block bg-white text-black shadow-md mt-2 rounded-md 
-                            w-full left-0 right-0 md:w-48 md:left-0 z-50">
-                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#email">Email</a></li>
-                        <li class="px-4 py-2 hover:bg-gray-200"><a href="#phone">Phone</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+          <!-- Contact Us -->
+          <li class="relative">
+            <div class="group" onmouseenter="clearHide(this)" onmouseleave="delayedHide(this)">
+              <a href="#contact" class="hover:text-yellow-400 block transition-colors duration-200">Contact Us</a>
+              <ul class="absolute bg-white text-black shadow-md mt-2 rounded-md w-48 top-full left-0 z-50 hidden">
+                <li class="px-4 py-2 hover:bg-gray-200"><a href="#email">Email</a></li>
+                <li class="px-4 py-2 hover:bg-gray-200"><a href="#phone">Phone</a></li>
+              </ul>
+            </div>
+          </li>
 
- <!-- Right Section: Authentication Buttons -->
-<div class="flex space-x-4"> 
-    <!-- Account button -->
-    <a href="account.html" class="bg-[#FFD700] text-black px-4 py-2 rounded hover:bg-red-500">
-        My account
-    </a>
+        </ul>
+      </div>
 
-    <!-- Sign Up button -->
-    <a href="signup.html" class="bg-[#FFD700] text-black px-4 py-2 rounded hover:bg-red-500">
-        Sign Up
-    </a>
-</div>
+      <!-- RIGHT: Profile Icon -->
+      <div>
+        <a href="#" id="profile-link">
+          <img src="Assets/user-profile-icon-free-vector.jpg" alt="Profile"
+               class="h-8 w-8 rounded-full border-2 border-white hover:border-yellow-400">
+        </a>
+      </div>
 
-
-
-    </div>
     </div>
 </nav>
 
-<!-- JavaScript for Mobile Menu Toggle -->
-<script>
-    document.getElementById("menu-toggle").addEventListener("click", function() {
-        var menu = document.getElementById("mobile-menu");
-        menu.classList.toggle("hidden");
-    });
-</script>
-
-
-    <!-- Hero Section -->
-    <section class="relative pt-16">
-        <img src="Assets/pexels-alesiakozik-6770611.jpg" alt="Stock Market Growth" class="w-full h-96 object-cover">
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center space-y-4">
-            <h2 class="text-3xl text-[#FFD700] font-bold">Vanguard Wealth Markets</h2>
-            <p class="text-xl text-[#FFD700] font-semibold">Investment opportunities tailored to your goals</p>
+<!-- Graphs Section -->
+<section class="bg-gray-800 pt-10 pb-20">
+    <div class="container mx-auto">
+        <h2 class="text-2xl text-white text-center mb-6">Financial Graphs</h2>
+        <div id="graphScroller" class="flex overflow-x-auto gap-6 px-4 scroll-smooth snap-x snap-mandatory">
+  
+            <!-- Apple -->
+            <div class="bg-gray-900 p-4 rounded-lg shadow-lg w-80 flex-shrink-0 snap-start">
+                <h3 class="text-white text-center mb-2 text-sm">Apple Inc. (AAPL)</h3>
+                <canvas id="chart1" class="w-full h-64"></canvas>
+            </div>
+  
+            <!-- Gold -->
+            <div class="bg-gray-900 p-4 rounded-lg shadow-lg w-80 flex-shrink-0 snap-start">
+                <h3 class="text-white text-center mb-2 text-sm">Gold (XAU/USD)</h3>
+                <canvas id="chart2" class="w-full h-64"></canvas>
+            </div>
+  
+            <!-- S&P 500 ETF -->
+            <div class="bg-gray-900 p-4 rounded-lg shadow-lg w-80 flex-shrink-0 snap-start">
+                <h3 class="text-white text-center mb-2 text-sm">S&P 500 (SPY)</h3>
+                <canvas id="chart3" class="w-full h-64"></canvas>
+            </div>
+  
+            <!-- Treasury ETF -->
+            <div class="bg-gray-900 p-4 rounded-lg shadow-lg w-80 flex-shrink-0 snap-start">
+                <h3 class="text-white text-center mb-2 text-sm">10Y Treasury (IEF)</h3>
+                <canvas id="chart4" class="w-full h-64"></canvas>
+            </div>
+  
+            <!-- Bitcoin -->
+            <div class="bg-gray-900 p-4 rounded-lg shadow-lg w-80 flex-shrink-0 snap-start">
+                <h3 class="text-white text-center mb-2 text-sm">Bitcoin (BTC/USD)</h3>
+                <canvas id="chart5" class="w-full h-64"></canvas>
+            </div>
+  
         </div>
-    </section>
+    </div>
+</section>
+
+
+  <!-- Hero Section (below) -->
+  <section class="relative pt-0">
+    <img src="Assets/pexels-alesiakozik-6770611.jpg" alt="Stock Market Growth" class="w-full h-96 object-cover">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center space-y-4">
+      <h2 class="text-3xl text-[#FFD700] font-bold">Vanguard Wealth Markets</h2>
+      <p class="text-xl text-[#FFD700] font-semibold">Investment opportunities tailored to your goals</p>
+    </div>
+  </section>
+  
 
 <!-- About Us Section -->
 <section id="about-us" class="py-16 relative bg-cover bg-center" 
@@ -342,7 +360,7 @@
 
  <!-- Contact Info -->
 
- <section id="contact-us" class="py-16 relative bg-cover bg-center" 
+ <section id="contact" class="py-16 relative bg-cover bg-center" 
     style="background-image: url('Assets/pexels-joenibraw-1416530.jpg');">
     
     <!-- Overlay to Reduce Background Opacity -->
@@ -552,6 +570,6 @@
         });
     });
     </script>
-    <script src="script.js"></script
+    <script src="script.js"></script>
 </body>
 </html>

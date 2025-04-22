@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Money</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Background image with reduced opacity */
+        body {
+            background: url('Assets/pexels-karolina-grabowska-5980577.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Dark overlay for better readability */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+            z-index: -1;
+        }
+
+        /* Semi-transparent card */
+        .deposit-card {
+            background: rgba(255, 255, 255, 0.85); /* 85% opacity */
+            backdrop-filter: blur(5px); /* Blurred background effect */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* Gold button */
+        .gold-btn {
+            background-color: #FFD700; /* Gold */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .gold-btn:hover {
+            background-color: red; /* Red hover effect */
+        }
+
+        /* Logo Styling */
+        .logo img {
+            width: 100px; /* Minimized */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+    <div class="deposit-card shadow-lg">
+        <!-- Logo with Home Link (Inside the Card) -->
+        <a href="index.html" class="logo">
+            <img src="Assets/Vanguard Wealth Markets logo.webp" alt="Vanguard Wealth Markets">
+        </a>
+
+        <!-- Page Title -->
+        <h2 class="text-2xl font-bold text-blue-700">Deposit Money</h2>
+
+        <!-- Deposit Form -->
+        <form id="depositForm" class="mt-6">
+            <!-- Bank Selection -->
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold">Select Bank</label>
+                <select name="bank" required class="w-full p-2 border rounded-lg">
+                    <option value="">-- Choose Bank --</option>
+                    <option value="Equity Bank">Equity Bank</option>
+                    <option value="KCB Bank">KCB Bank</option>
+                    <option value="Standard Chartered">Standard Chartered</option>
+                    <option value="Co-operative Bank">Co-operative Bank</option>
+                    <option value="Absa Bank">Absa Bank</option>
+                    <option value="National Bank">National Bank</option>
+                    <option value="Chase Bank">Chase Bank</option>
+                    <option value="Citibank">Citibank</option>
+                    <option value="HSBC">HSBC</option>
+                    <option value="Bank of America">Bank of America</option>
+                    <option value="JP Morgan Chase">JP Morgan Chase</option>
+                    <option value="Wells Fargo">Wells Fargo</option>
+                </select>
+            </div>
+
+            <!-- Account Name -->
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold">Account Holder Name</label>
+                <input type="text" name="account_name" required class="w-full p-2 border rounded-lg">
+            </div>
+
+            <!-- Account Number -->
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold">Account Number</label>
+                <input type="text" name="account_number" required class="w-full p-2 border rounded-lg">
+            </div>
+
+            <!-- Deposit Amount -->
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold">Deposit Amount (USD)</label>
+                <input type="number" name="amount" required class="w-full p-2 border rounded-lg" min="100">
+            </div>
+
+            <!-- Upload Payment Proof -->
+            <div class="mb-4">
+                <label class="block text-gray-700 font-semibold">Upload Payment Proof</label>
+                <input type="file" name="proof" required class="w-full p-2 border rounded-lg">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="mt-4 text-center">
+                <button type="submit" class="gold-btn">Submit Deposit</button>
+            </div>
+        </form>
+
+<!-- Return to Account Page Button -->
+<div class="mt-4 text-center">
+    <a href="account.html" class="text-red-500 inline-block px-6 py-2 font-semibold">← Return to Account</a>
+</div>
+
+
+    <script>
+        // Handle Form Submission
+        document.getElementById('depositForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent page reload
+
+            alert('Deposit submitted successfully! Redirecting to home page...');
+            
+            // Redirect to home page after 2 seconds
+            setTimeout(() => {
+                window.location.href = 'index.html'; // Change to your homepage file
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>
