@@ -3,69 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vanguard Wealth Markets</title>
+  <title>Vanguard Wealth Markets - Economic Trends</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0"></script>
 </head>
 <body class="min-h-screen bg-gray-500 flex items-center justify-center p-6">
-    <div class="bg-gray-200 bg-opacity-90 backdrop-blur-sm p-8 rounded-lg shadow-lg w-full max-w-4xl">
-        <h2 class="text-3xl font-bold text-center text-yellow-500 mb-6">Global Economic Trends</h2>
-      
-        <p class="text-lg text-gray-800 mb-4">
-          Economic trends represent the broad patterns and changes in the economy over time. At Vanguard Wealth Markets, we study and interpret these trends to help investors make data-driven decisions. Understanding these movements is essential for anticipating market shifts, mitigating risks, and seizing opportunities.
-        </p>
-      
-        <h3 class="text-2xl font-semibold text-gray-700 mb-4">Key Economic Indicators</h3>
-        <ul class="list-disc list-inside text-lg text-gray-800 mb-4">
-          <li><strong>Gross Domestic Product (GDP):</strong> Measures the overall economic output of a country. A growing GDP often signals a healthy economy, while a declining GDP can indicate recession.</li>
-          <li><strong>Inflation Rate:</strong> Tracks the rate at which prices for goods and services rise. Moderate inflation is typical of a growing economy, but high inflation can erode purchasing power.</li>
-          <li><strong>Interest Rates:</strong> Set by central banks, these influence borrowing costs and consumer spending. Lower interest rates often encourage investment and spending.</li>
-          <li><strong>Unemployment Rate:</strong> Indicates the percentage of the labor force that is jobless but actively seeking work. High unemployment can signal economic trouble.</li>
-          <li><strong>Consumer Confidence Index (CCI):</strong> Measures consumer sentiment. A high CCI suggests optimism, which often leads to increased spending and investment.</li>
-        </ul>
-      
-        <h3 class="text-2xl font-semibold text-gray-700 mb-4">Global Trends and Impacts</h3>
-        <p class="text-lg text-gray-800 mb-4">
-          From global pandemics to international conflicts and climate shifts, global economic trends are influenced by a myriad of factors. Our analysts track developments such as trade agreements, commodity prices, and central bank policies to offer timely insights.
-        </p>
-      
-        <h3 class="text-2xl font-semibold text-gray-700 mb-4">Why Economic Trends Matter</h3>
-        <p class="text-lg text-gray-800 mb-4">
-          Investors, governments, and corporations alike use economic trend data to guide strategy. At Vanguard Wealth Markets, we utilize these insights to forecast potential market movements, optimize asset allocation, and inform long-term planning.
-        </p>
-      
-        <h3 class="text-2xl font-semibold text-gray-700 mb-4">How We Present Data</h3>
-        <p class="text-lg text-gray-800 mb-4">
-          We combine historical data with real-time analysis, often visualized in interactive charts and dashboards. Whether it's tracking GDP fluctuations, inflation spikes, or global debt levels, our economic dashboards deliver clarity and actionable insights.
-        </p>
-      
-    
-    <!-- Trend Data Section -->
+  <div class="bg-gray-200 bg-opacity-90 backdrop-blur-sm p-8 rounded-lg shadow-lg w-full max-w-4xl">
+    <h2 class="text-3xl font-bold text-center text-yellow-500 mb-6">Global Economic Trends</h2>
+
     <div id="economicTrends" class="space-y-6">
-      <h4 class="text-xl font-semibold text-gray-700">GDP Growth Data</h4>
-      <p id="trendMessage" class="text-gray-600">Loading data...</p>
-      <div id="trendChart" class="bg-white p-4 rounded-lg shadow-md">
-        <!-- Chart will be dynamically inserted here -->
-      </div>
+      <!-- USA Section -->
+      <h4 class="text-xl font-semibold text-gray-700">United States Economic Trends</h4>
+      <p class="text-gray-600">The United States remains the world’s largest economy, driven by consumer spending, technology, and services.</p>
+      <ul class="text-gray-600 list-disc ml-6">
+        <li>GDP Growth: 2.1% annually (Latest estimate)</li>
+        <li>Inflation Rate: 3.2% (Current)</li>
+        <li>Unemployment Rate: 4.1% (Current)</li>
+        <li>Government Debt: $31.4 trillion</li>
+        <li>Stock Market Performance: S&P 500 up 9.4% YTD</li>
+        <li>Economic Forecast: Expected 2.3% growth next year</li>
+      </ul>
+
+      <!-- China Section -->
+      <h4 class="text-xl font-semibold text-gray-700">China Economic Trends</h4>
+      <p class="text-gray-600">China is a global economic powerhouse, with a focus on innovation, manufacturing, and export-driven growth.</p>
+      <ul class="text-gray-600 list-disc ml-6">
+        <li>GDP Growth: 5.4% annually</li>
+        <li>Inflation Rate: 2.1%</li>
+        <li>Unemployment Rate: 5.5%</li>
+        <li>Government Debt: 60% of GDP</li>
+        <li>Stock Market Performance: Shanghai Composite up 4.1% YTD</li>
+        <li>Economic Forecast: Expected 5.8% growth next year</li>
+      </ul>
+
+      <!-- Germany Section -->
+      <h4 class="text-xl font-semibold text-gray-700">Germany Economic Trends</h4>
+      <p class="text-gray-600">Germany is Europe’s largest economy, with a focus on industry, automotive, and manufacturing.</p>
+      <ul class="text-gray-600 list-disc ml-6">
+        <li>GDP Growth: 1.2%</li>
+        <li>Inflation Rate: 5.0%</li>
+        <li>Unemployment Rate: 3.0%</li>
+        <li>Government Debt: 60% of GDP</li>
+        <li>Stock Market Performance: DAX down 3.2% YTD</li>
+        <li>Economic Forecast: Expected 1.5% growth next year</li>
+      </ul>
+
+      <!-- Kenya Section -->
+      <h4 class="text-xl font-semibold text-gray-700">Kenya Economic Trends</h4>
+      <p class="text-gray-600">Kenya has a diverse economy, with key sectors including agriculture, financial services, and technology.</p>
+      <ul class="text-gray-600 list-disc ml-6">
+        <li>GDP Growth: 5.6%</li>
+        <li>Inflation Rate: 7.5%</li>
+        <li>Unemployment Rate: 9.6%</li>
+        <li>Government Debt: 58% of GDP</li>
+        <li>Stock Market Performance: NSE 20 Index up 3.5% YTD</li>
+        <li>Economic Forecast: Expected 6.0% growth next year</li>
+      </ul>
+
+      <!-- Brazil Section -->
+      <h4 class="text-xl font-semibold text-gray-700">Brazil Economic Trends</h4>
+      <p class="text-gray-600">Brazil has a growing economy, driven by natural resources, agriculture, and services, with challenges in infrastructure and political stability.</p>
+      <ul class="text-gray-600 list-disc ml-6">
+        <li>GDP Growth: 3.0%</li>
+        <li>Inflation Rate: 6.4%</li>
+        <li>Unemployment Rate: 9.3%</li>
+        <li>Government Debt: 77% of GDP</li>
+        <li>Stock Market Performance: Bovespa up 15.0% YTD</li>
+        <li>Economic Forecast: Expected 3.2% growth next year</li>
+      </ul>
+
+      <!-- India Section -->
+      <h4 class="text-xl font-semibold text-gray-700">India Economic Trends</h4>
+      <p class="text-gray-600">India has a rapidly growing economy, with major industries including technology, manufacturing, and agriculture.</p>
+      <ul class="text-gray-600 list-disc ml-6">
+        <li>GDP Growth: 7.0%</li>
+        <li>Inflation Rate: 5.1%</li>
+        <li>Unemployment Rate: 6.1%</li>
+        <li>Government Debt: 70% of GDP</li>
+        <li>Stock Market Performance: Nifty 50 up 12.0% YTD</li>
+        <li>Economic Forecast: Expected 7.5% growth next year</li>
+      </ul>
+
+      <!-- Russia Section -->
+      <h4 class="text-xl font-semibold text-gray-700">Russia Economic Trends</h4>
+      <p class="text-gray-600">Russia’s economy relies heavily on energy exports, with challenges due to sanctions and political instability.</p>
+      <ul class="text-gray-600 list-disc ml-6">
+        <li>GDP Growth: 2.5%</li>
+        <li>Inflation Rate: 4.3%</li>
+        <li>Unemployment Rate: 5.2%</li>
+        <li>Government Debt: 20% of GDP</li>
+        <li>Stock Market Performance: RTS Index up 6.5% YTD</li>
+        <li>Economic Forecast: Expected 2.8% growth next year</li>
+      </ul>
+
+      <!-- Japan Section -->
+      <h4 class="text-xl font-semibold text-gray-700">Japan Economic Trends</h4>
+      <p class="text-gray-600">Japan is a major global economic player with a focus on technology, automotive, and industrial sectors, though it faces demographic challenges.</p>
+      <ul class="text-gray-600 list-disc ml-6">
+        <li>GDP Growth: 1.0%</li>
+        <li>Inflation Rate: 0.8%</li>
+        <li>Unemployment Rate: 2.5%</li>
+        <li>Government Debt: 250% of GDP</li>
+        <li>Stock Market Performance: Nikkei 225 up 8.2% YTD</li>
+        <li>Economic Forecast: Expected 1.5% growth next year</li>
+      </ul>
+
+      <!-- South Africa Section -->
+      <h4 class="text-xl font-semibold text-gray-700">South Africa Economic Trends</h4>
+      <p class="text-gray-600">South Africa's economy is the second-largest in Africa, with strong sectors in mining, manufacturing, and agriculture.</p>
+      <ul class="text-gray-600 list-disc ml-6">
+        <li>GDP Growth: 1.5%</li>
+        <li>Inflation Rate: 7.4%</li>
+        <li>Unemployment Rate: 34.9%</li>
+        <li>Government Debt: 63% of GDP</li>
+        <li>Stock Market Performance: JSE All Share up 4.2% YTD</li>
+        <li>Economic Forecast: Expected 2.0% growth next year</li>
+      </ul>
+
+      <!-- Mexico Section -->
+      <h4 class="text-xl font-semibold text-gray-700">Mexico Economic Trends</h4>
+      <p class="text-gray-600">Mexico has a diversified economy, with significant sectors in oil, manufacturing, and agriculture, with a growing middle class.</p>
+      <ul class="text-gray-600 list-disc ml-6">
+        <li>GDP Growth: 2.3%</li>
+        <li>Inflation Rate: 5.0%</li>
+        <li>Unemployment Rate: 3.5%</li>
+        <li>Government Debt: 55% of GDP</li>
+        <li>Stock Market Performance: IPC Index up 8.0% YTD</li>
+        <li>Economic Forecast: Expected 2.5% growth next year</li>
+      </ul>
+
+      <!-- United Kingdom Section -->
+      <h4 class="text-xl font-semibold text-gray-700">United Kingdom Economic Trends</h4>
+      <p class="text-gray-600">The UK economy is a global financial hub, though Brexit has presented challenges for trade and labor markets.</p>
+      <ul class="text-gray-600 list-disc ml-6">
+        <li>GDP Growth: 1.5%</li>
+        <li>Inflation Rate: 5.6%</li>
+        <li>Unemployment Rate: 4.3%</li>
+        <li>Government Debt: 98% of GDP</li>
+        <li>Stock Market Performance: FTSE 100 up 2.0% YTD</li>
+        <li>Economic Forecast: Expected 1.8% growth next year</li>
+      </ul>
     </div>
 
-    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Get in Touch</h3>
-    <p class="text-lg text-gray-800 mb-4">For inquiries or further information, feel free to contact our customer service team via email or phone. We're here to help you achieve your financial goals!</p>
-          
     <div class="flex justify-center mt-6">
-        <a href="contact.html" class="text-yellow-500 hover:text-blue-500 font-semibold transition duration-300">
-           Contact Us
-        </a>
-      </div>
-      
-      
-      <div class="flex justify-center mt-6">
         <a href="index.html" class="text-blue-500 hover:text-red-500 font-semibold text-lg transition duration-300">
           Return to Home Page
         </a>
-      </div>
-           
-      
-  <script src="trends.js"></script>
+    </div>
+  </div>
 </body>
 </html>

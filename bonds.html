@@ -6,24 +6,101 @@
   <title>Bonds - Vanguard Wealth Markets</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-gray-100 min-h-screen text-gray-800">
   <div class="container mx-auto p-6">
-    <h1 class="text-3xl font-bold text-center text-green-600 mb-6">Bond Investment Plans</h1>
-    <p class="text-lg text-gray-700 mb-4">Choose from secure and consistent income options via government and corporate bonds.</p>
-    
-    <ul class="space-y-4">
-      <li class="bg-white p-4 rounded shadow">
-        <h2 class="text-xl font-semibold">Kenya Treasury Bonds</h2>
-        <p>Invest in long-term government securities with fixed interest payments.</p>
-      </li>
-      <li class="bg-white p-4 rounded shadow">
-        <h2 class="text-xl font-semibold">Corporate Bonds</h2>
-        <p>High-yield options from top-rated Kenyan and international companies.</p>
-      </li>
-    </ul>
+    <h1 class="text-4xl font-bold text-center text-green-700 mb-8">Bond Investment Plans</h1>
+    <p class="text-lg mb-6 text-center max-w-3xl mx-auto">
+      At Vanguard Wealth Markets, we offer a variety of bond investment opportunities tailored for both conservative and income-seeking investors. Bonds provide predictable income, capital preservation, and portfolio diversification.
+    </p>
 
-    <div class="mt-8 text-center">
-      <a href="index.html" class="text-green-600 font-semibold hover:underline">← Return to Homepage</a>
+    <!-- Bond Options -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Treasury Bonds -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-green-600 mb-2">Kenya Treasury Bonds</h2>
+        <p class="mb-2">Backed by the Government of Kenya, these bonds are ideal for long-term investments with semi-annual fixed interest payments.</p>
+        <ul class="list-disc pl-5 text-sm text-gray-600">
+          <li>Tenure: 1 to 30 years</li>
+          <li>Tax-free for Kenyan residents</li>
+          <li>Minimum investment: Ksh 50,000</li>
+        </ul>
+      </div>
+
+      <!-- Corporate Bonds -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-green-600 mb-2">Corporate Bonds</h2>
+        <p class="mb-2">Issued by top-tier corporations in Kenya and abroad, these bonds offer competitive yields and risk-adjusted returns.</p>
+        <ul class="list-disc pl-5 text-sm text-gray-600">
+          <li>High yield with moderate risk</li>
+          <li>Diversification from government securities</li>
+          <li>Backed by company revenue or assets</li>
+        </ul>
+      </div>
+
+      <!-- Green Bonds -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-green-600 mb-2">Green Bonds</h2>
+        <p class="mb-2">Eco-conscious investment in environmental projects like renewable energy, sustainable agriculture, and clean transportation.</p>
+        <ul class="list-disc pl-5 text-sm text-gray-600">
+          <li>Backed by both private and public issuers</li>
+          <li>Support climate-friendly infrastructure</li>
+          <li>Attractive to ESG investors</li>
+        </ul>
+      </div>
+
+      <!-- Infrastructure Bonds -->
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-green-600 mb-2">Infrastructure Bonds</h2>
+        <p class="mb-2">Tax-free investments supporting national development projects such as roads, energy, and water supply systems.</p>
+        <ul class="list-disc pl-5 text-sm text-gray-600">
+          <li>Tenure: 5 to 25 years</li>
+          <li>No withholding tax on interest income</li>
+          <li>Issued by the Kenyan government</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Why Invest in Bonds -->
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold text-center text-green-700 mb-4">Why Invest in Bonds?</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-sm">
+        <div class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold text-lg mb-2">Stable Income</h3>
+          <p>Receive predictable interest payments, usually semi-annually or annually, regardless of market fluctuations.</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold text-lg mb-2">Capital Preservation</h3>
+          <p>Ideal for risk-averse investors, bonds help protect your principal while earning returns over time.</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h3 class="font-semibold text-lg mb-2">Diversification</h3>
+          <p>Reduce portfolio risk by balancing stocks and real estate with fixed-income securities like bonds.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold text-center text-green-700 mb-4">Frequently Asked Questions</h2>
+      <div class="space-y-4 max-w-3xl mx-auto text-sm">
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="font-semibold">How do I buy bonds on Vanguard Wealth Markets?</h4>
+          <p>You can invest directly via your account dashboard. We offer easy onboarding and secure transactions.</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="font-semibold">Are bonds safe?</h4>
+          <p>Government bonds are considered very safe, while corporate and green bonds carry slightly more risk but higher potential returns.</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="font-semibold">Can I sell my bonds before maturity?</h4>
+          <p>Yes, most bonds can be sold in the secondary market, though price and demand may vary depending on the bond type.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back Button -->
+    <div class="mt-10 text-center">
+      <a href="index.html" class="text-green-700 font-semibold hover:underline">← Return to Homepage</a>
     </div>
   </div>
 </body>
