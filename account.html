@@ -5,22 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Account</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .bg-custom {
-      background-image: url('Assets/pexels-christina99999-31310637.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-    .bg-overlay {
-      background-color: rgba(255, 255, 255, 0.65);
-      backdrop-filter: blur(8px);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-  </style>
 </head>
-<body class="bg-custom">
+<body class="bg-cover bg-center" style="background-image: url('Assets/pexels-christina99999-31310637.jpg');">
 
   <!-- Navbar -->
   <nav class="bg-black p-4">
@@ -31,7 +17,7 @@
   </nav>
 
   <!-- Account Section -->
-  <div class="max-w-2xl mx-auto bg-overlay mt-8">
+  <div class="max-w-2xl mx-auto bg-white bg-opacity-65 backdrop-blur-lg p-6 mt-8 rounded-lg shadow-lg">
     <h2 class="text-2xl font-bold mb-4">Account Details</h2>
 
     <form class="space-y-4">
@@ -81,18 +67,18 @@
     <p class="text-gray-600 mb-4">Select a withdrawal method:</p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-<!-- Mpesa -->
-<button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" onclick="window.location.href='mpesa-withdraw.html'">
-  📱 Mpesa
-</button>
-
-        
-       <!-- Banks -->
-<a href="bank-withdraw.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 text-center flex justify-center items-center">
-  🏦 Bank Withdrawal
-</a>
-
+      <!-- Mpesa -->
+      <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 flex items-center" onclick="window.location.href='mpesa-withdraw.html'">
+        <!-- M-Pesa Logo Image before Text -->
+        <img src="Assets/mpesa.png" alt="M-Pesa" class="w-5 h-5 mr-2"> <!-- Adjust w-5 and h-5 to size the image -->
+        Mpesa
+      </button>
       
+
+      <!-- Bank Withdrawal -->
+      <a href="bank-withdraw.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 text-center flex justify-center items-center">
+        🏦 Bank Withdrawal
+      </a>
     </div>
 
     <!-- Deposit Money -->
@@ -103,10 +89,12 @@
         </button>
         <!-- Mpesa Paybill Button -->
         <a href="mpesa_deposit.html">
-            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
-                📱 Mpesa Paybill
-            </button>
-        </a>
+          <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 flex items-center">
+            <!-- M-Pesa Logo Image before Text -->
+            <img src="Assets/mpesa.png" alt="M-Pesa" class="w-5 h-5 mr-2"> <!-- Adjust w-5 and h-5 to size the image -->
+            Mpesa Paybill
+          </button>
+        </a>        
     </div>
 
     <!-- Logout Button -->
@@ -119,4 +107,5 @@
   <script src="account.js"></script>
 </body>
 </html>
+
 

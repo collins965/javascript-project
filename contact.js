@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Simulated submission logic
         alert("Thank you for contacting Vanguard Wealth Markets! We’ll get back to you soon.");
         form.reset();
+        window.location.href = "index.html"; // Redirect to homepage
     });
 
     function highlightError(input) {
