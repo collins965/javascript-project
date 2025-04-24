@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mpesa Deposit</title>
+    <title>Mpesa Withdrawal</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="flex items-center justify-center min-h-screen bg-cover bg-center relative" style="background-image: url('Assets/pexels-karolina-grabowska-5980577.jpg');">
@@ -15,7 +15,7 @@
         </a>
 
         <!-- Page Title -->
-        <h2 class="text-2xl font-bold text-green-600 mb-4">Mpesa Deposit</h2>
+        <h2 class="text-2xl font-bold text-green-600 mb-4">Mpesa Withdrawal</h2>
 
         <!-- Mpesa Payment Instructions -->
         <div class="text-gray-700 mb-6">
@@ -23,35 +23,29 @@
             <p><strong>Account Number:</strong> Your Registered Name</p>
         </div>
 
-        <!-- Mpesa Deposit Form -->
-        <form id="mpesaForm" class="space-y-6">
+        <!-- Mpesa Withdrawal Form -->
+        <form id="mpesaWithdrawForm" class="space-y-6">
             <!-- Phone Number -->
             <div>
                 <label for="phone" class="block text-gray-700 font-semibold">Mpesa Phone Number</label>
                 <input type="tel" name="phone" required class="w-full p-3 border rounded-lg" placeholder="e.g. +254712345678">
             </div>
 
-            <!-- Deposit Amount -->
+            <!-- Withdrawal Amount -->
             <div>
-                <label for="amount" class="block text-gray-700 font-semibold">Deposit Amount (KES)</label>
+                <label for="amount" class="block text-gray-700 font-semibold">Withdrawal Amount (KES)</label>
                 <input type="number" name="amount" required class="w-full p-3 border rounded-lg" min="1">
             </div>
 
-            <!-- Transaction Code -->
+            <!-- Mpesa Transaction Code -->
             <div>
                 <label for="transaction_code" class="block text-gray-700 font-semibold">Mpesa Transaction Code</label>
                 <input type="text" name="transaction_code" required class="w-full p-3 border rounded-lg" placeholder="e.g. ABC123XYZ">
             </div>
 
-            <!-- Upload Payment Screenshot -->
-            <div>
-                <label for="proof" class="block text-gray-700 font-semibold">Upload Payment Screenshot</label>
-                <input type="file" name="proof" required class="w-full p-3 border rounded-lg">
-            </div>
-
             <!-- Submit Button -->
             <div class="mt-4">
-                <button type="submit" class="w-full py-3 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-red-500 transition">Submit Deposit</button>
+                <button type="submit" class="w-full py-3 bg-yellow-500 text-white font-semibold rounded-lg hover:bg-red-500 transition">Submit Withdrawal</button>
             </div>
         </form>
 
@@ -61,8 +55,6 @@
         </div>
     </div>
 
-    <script src="mpesa.js"></script>
- 
-
+    <script src="mpesa-withdraw.js"></script>
 </body>
 </html>

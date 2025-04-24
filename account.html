@@ -81,20 +81,18 @@
     <p class="text-gray-600 mb-4">Select a withdrawal method:</p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <!-- Mpesa -->
-        <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
-            📱 Mpesa
-        </button>
-        
-        <!-- Kenyan Banks -->
-        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-            🏦 Kenyan Banks
-        </button>
+<!-- Mpesa -->
+<button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" onclick="window.location.href='mpesa-withdraw.html'">
+  📱 Mpesa
+</button>
 
-        <!-- International Banks -->
-        <button class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600">
-            🌍 International Banks
-        </button>
+        
+       <!-- Banks -->
+<a href="bank-withdraw.html" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 text-center flex justify-center items-center">
+  🏦 Bank Withdrawal
+</a>
+
+      
     </div>
 
     <!-- Deposit Money -->

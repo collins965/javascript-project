@@ -131,7 +131,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
   }
   
-  // 11. Financial Charts (Chart.js + TwelveData)
+  // 11. Financial Charts
   const financialSymbols = ['AAPL', 'XAU/USD', 'SPY', 'IEF', 'BTC/USD'];
   const apiKey = '7b99487bc32a4a2592bb7eff1bc8365a';
   
@@ -195,7 +195,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     dropdown.classList.remove('hidden');
   }
   
-  // 13. Profile Redirect Based on Login (Final Fix)
+  // 13. Profile Redirect Based on Login
   document.addEventListener("DOMContentLoaded", () => {
     const profileLink = document.getElementById("profile-link");
   

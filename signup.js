@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
   
-      // Simulate creating user data (you could add server call here)
+      // Simulate creating user data
       const userInfo = {
         name: name,
         email: email,
-        phone: "+254 712 345 678", // Optional placeholder
+        phone: "+254 712 345 678", 
         accountNumber: "1234567890",
         balance: "Ksh 5,000,000",
         profitRate: "25% per month",
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 1500);
     });
   
-    // Profile icon behavior (optional if you also put it in a common script)
+    // Profile icon behavior
     const profileLink = document.getElementById("profile-link");
     if (profileLink) {
       profileLink.addEventListener("click", (e) => {

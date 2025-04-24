@@ -1,7 +1,4 @@
-.page-transition {
-    opacity: 0;
-    transition: opacity 0.5s ease-out;
-}
+
 .tooltip {
     position: absolute;
     background-color: #333;
@@ -16,13 +13,3 @@
     padding: 15px;
     background-color: #f4f4f4;
 }
-/* Mobile menu hidden by default */
-#mobile-menu {
-    display: none;
-}
-
-/* When the hidden class is removed, show the menu */
-#mobile-menu:not(.hidden) {
-    display: block;
-}
-

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Send Email</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-cover bg-center flex items-center justify-center p-6" style="background-image: url('Assets/pexels-joenibraw-1416530.jpg');">
+
+  <div class="bg-white bg-opacity-90 backdrop-blur-sm p-8 rounded-lg shadow-lg w-full max-w-md relative">
+    <!-- Logo inside the form with increased opacity and reduced size -->
+    <a href="index.html" class="absolute top-4 left-4">
+      <img src="Assets/Vanguard Wealth Markets logo.webp" alt="Vanguard Wealth Markets" class="w-16 h-auto opacity-90 hover:opacity-100 transition-opacity duration-300">
+    </a>
+
+    <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Send Us a Message</h2>
+
+    <form id="emailForm" class="space-y-5">
+      <div>
+        <label for="name" class="block font-medium text-gray-700">Your Name</label>
+        <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-300">
+      </div>
+
+      <div>
+        <label for="email" class="block font-medium text-gray-700">Your Email</label>
+        <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-300">
+      </div>
+
+      <div>
+        <label for="subject" class="block font-medium text-gray-700">Subject</label>
+        <input type="text" id="subject" name="subject" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-300">
+      </div>
+
+      <div>
+        <label for="message" class="block font-medium text-gray-700">Message</label>
+        <textarea id="message" name="message" rows="4" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:ring-blue-300"></textarea>
+      </div>
+
+      <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 rounded-lg">
+        📧 Send Message
+      </button>
+
+      <p id="statusMsg" class="text-center mt-4 text-green-600 font-semibold hidden">Message sent successfully!</p>
+    </form>
+
+    <!-- Return to Homepage Link-style Button -->
+    <div class="mt-6 text-center">
+      <a href="index.html" class="text-blue-500 hover:text-blue-700 font-semibold">
+        Return to Homepage
+      </a>
+    </div>
+  </div>
+
+  <script src="email.js"></script>
+</body>
+</html>

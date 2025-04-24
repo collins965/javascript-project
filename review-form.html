@@ -101,36 +101,7 @@
         </form>
     </div>
 
-    <script>
-        // Star rating selection
-        const stars = document.querySelectorAll('.star');
-        const ratingInput = document.getElementById('rating-value');
-
-        stars.forEach(star => {
-            star.addEventListener('click', () => {
-                let value = star.getAttribute('data-value');
-                ratingInput.value = value;
-
-                // Highlight selected stars
-                stars.forEach(s => {
-                    s.style.color = s.getAttribute('data-value') <= value ? 'gold' : 'gray';
-                });
-            });
-        });
-
-        // Form submission handling
-        document.getElementById('reviewForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form refresh
-
-            alert('Review submitted successfully! Returning to home page...');
-            
-            // Redirect to home page after 2 seconds
-            setTimeout(() => {
-                window.location.href = 'index.html'; // Change 'index.html' to your home page filename
-            }, 2000);
-        });
-    </script>
+    <script src="review.js"></script>
 
 </body>
 </html>
-
