@@ -1,4 +1,3 @@
-// Wait for the DOM to be fully loaded before adding event listeners
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("mpesaWithdrawForm");
 
@@ -17,13 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Example of handling the submission
-        console.log("Form submitted:", { phone, amount, transactionCode });
-
         // Notify the user that the submission was successful
-        alert("Your Mpesa withdrawal request has been submitted successfully!");
-        
+        alert(`Your Mpesa withdrawal request of KES ${amount.toLocaleString()} has been submitted successfully!`);
+
         // Optionally, reset the form
         form.reset();
+
+        // Redirect to account page after a slight delay
+        setTimeout(() => {
+            window.location.href = 'account.html';
+        }, 1500); // Redirect after 1.5 seconds
     });
 });

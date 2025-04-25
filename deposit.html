@@ -24,7 +24,6 @@
 
     <!-- Form -->
     <form id="depositForm" class="space-y-4">
-
       <div>
         <label class="block text-gray-700 font-semibold mb-1">Select Bank</label>
         <select name="bank" required class="w-full p-2 border rounded-lg">
@@ -42,41 +41,49 @@
           <option value="JP Morgan Chase">JP Morgan Chase</option>
           <option value="Wells Fargo">Wells Fargo</option>
         </select>
+        <p class="error-message text-red-600 text-sm mt-1 hidden" data-error-for="bank"></p>
       </div>
-
+      
       <div>
         <label class="block text-gray-700 font-semibold mb-1">Account Holder Name</label>
         <input type="text" name="account_name" required class="w-full p-2 border rounded-lg"/>
+        <p class="error-message text-red-600 text-sm mt-1 hidden" data-error-for="account_name"></p>
       </div>
-
+      
       <div>
         <label class="block text-gray-700 font-semibold mb-1">Account Number</label>
         <input type="text" name="account_number" required class="w-full p-2 border rounded-lg"/>
+        <p class="error-message text-red-600 text-sm mt-1 hidden" data-error-for="account_number"></p>
       </div>
-
+      
       <div>
         <label class="block text-gray-700 font-semibold mb-1">Deposit Amount (USD)</label>
         <input type="number" name="amount" required min="100" class="w-full p-2 border rounded-lg"/>
+        <p class="error-message text-red-600 text-sm mt-1 hidden" data-error-for="amount"></p>
       </div>
-
+      
       <div>
         <label class="block text-gray-700 font-semibold mb-1">Upload Payment Proof</label>
         <input type="file" name="proof" required class="w-full p-2 border rounded-lg"/>
+        <p class="error-message text-red-600 text-sm mt-1 hidden" data-error-for="proof"></p>
       </div>
-
+      
       <div>
-        <button type="submit" class="bg-yellow-400 hover:bg-red-500 text-white font-semibold px-6 py-2 rounded-lg transition duration-300">Submit Deposit</button>
+        <button id="submitDeposit" type="button" class="bg-yellow-400 hover:bg-red-500 text-white font-semibold px-6 py-2 rounded-lg transition duration-300">
+          Submit Deposit
+        </button>
       </div>
-    </form>
+      
+      </form>         
 
     <!-- Return Button -->
     <div class="mt-4">
-      <a href="account.html" class="text-red-500 font-semibold inline-block">← Return to Account</a>
+      <a href="account.html" class="text-blue-600 hover:text-red-500 font-semibold inline-block">← Return to Account</a>
     </div>
   </div>
 
   <!-- External JS -->
-  <script src="js/deposit.js"></script>
+  <script src="deposit.js"></script>
 </body>
 </html>
 
